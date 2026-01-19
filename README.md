@@ -2,8 +2,6 @@
 
 This project is a bank account simulation system developed in Python, focused on demonstrating Object-Oriented Programming (OOP) concepts such as inheritance, polymorphism, encapsulation, and composition.
 
-It was designed as a small but complete application, going beyond a simple study example, and structured in a way that reflects real-world software organization.
-
 ## Project Objective
 
 The goal of this project is to model different types of bank accounts and calculate their monthly returns according to specific business rules, such as taxes and investment rates.
