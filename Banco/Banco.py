@@ -1,22 +1,30 @@
-#classe que gerencia todas as contas e calcula o rendimento mensal
+# Classe Banco
+# Responsável por gerenciar um conjunto de contas
+# e aplicar o cálculo de rendimento mensal utilizando polimorfismo
 
 class Banco:
     def __init__(self, codigo, nome):
+        # Código identificador do banco
         self.codigo = codigo
+
+        # Nome do banco
         self.nome = nome
+
+        # Lista de contas associadas ao banco
         self.contas = []
 
-    #metodos para adicionar contas, calcular o rendimento mensal, imprimir o saldo das contas
-
-    def adiciona_conta(self, conta_cliente):
+    # Adiciona uma conta ao banco
+    def adicionar_conta(self, conta_cliente):
         self.contas.append(conta_cliente)
 
-    #este metodo é polimorfico e tem uma implementação diferente em casa classe
+    # Aplica o cálculo de rendimento mensal em todas as contas
+    # Este método utiliza POLIMORFISMO:
+    # cada conta executa sua própria implementação de calcular_rendimento
     def calcular_rendimento_mensal(self):
-        for c in self.contas:
-            c.calculoRendimento()
+        for conta in self.contas:
+            conta.calcular_rendimento()
 
-    def imprime_saldo_contas(self):
-        for c in self.contas:
-            c.extrato()
-
+    # Imprime o saldo (extrato) de todas as contas do banco
+    def imprimir_saldos(self):
+        for conta in self.contas:
+            conta.extrato()
